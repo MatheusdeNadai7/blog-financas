@@ -32,7 +32,7 @@ Não é necessário instalar nada.
 
 ## Site publicado
 
-Disponível em: https://SEU-USUARIO.github.io/blog-financas/
+Disponível em:  https://matheusdenadai7.github.io/blog-financas/
 
 ## Aviso
 
