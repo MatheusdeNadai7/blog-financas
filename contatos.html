@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contatos | Blog de Finanças</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <div class="container topo-inner">
+      <a href="index.html" class="logo">Finanças<span>.blog</span></a>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-btn" aria-label="Abrir menu">&#9776;</label>
+      <nav class="menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="conteudo_1.html">Orçamento</a></li>
+          <li><a href="conteudo_2.html">Reserva</a></li>
+          <li><a href="conteudo_3.html">Investimentos</a></li>
+          <li><a href="glossario.html">Glossário</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contatos.html" class="ativo">Contatos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <div class="artigo">
+          <span class="rotulo">Contatos</span>
+          <h1>Fale com a gente</h1>
+          <p class="lead">
+            Tem dúvidas, sugestões de temas ou quer compartilhar sua experiência? Sua mensagem é bem-vinda.
+            Preencha o formulário abaixo e retornaremos o quanto antes.
+          </p>
+
+          <form>
+            <div>
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+            </div>
+
+            <div>
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+            </div>
+
+            <div>
+              <label for="assunto">Assunto</label>
+              <input type="text" id="assunto" name="assunto" placeholder="Ex.: sugestão de tema">
+            </div>
+
+            <div>
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" rows="6" placeholder="Escreva sua mensagem" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primario">Enviar mensagem</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>&copy; 2026 Blog de Finanças. Todos os direitos reservados.</p>
+      <p>Conteúdo educacional, sem recomendação de investimento.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

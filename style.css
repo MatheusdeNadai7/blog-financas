@@ -1,0 +1,500 @@
+/* ==========================================================
+   Blog de Finanças – estilo global (tema escuro, responsivo)
+   ========================================================== */
+
+:root {
+  --bg: #040406;
+  --bg-card: #0c0d12;
+  --borda: #1c1f29;
+  --texto: #e9ecf2;
+  --texto-suave: #98a0b3;
+  --verde: #22c55e;
+  --verde-escuro: #15803d;
+  --raio: 14px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--texto);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+main {
+  flex: 1;
+}
+
+/* ---------- Cabeçalho e navegação ---------- */
+
+header.topo {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(4, 4, 6, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--borda);
+}
+
+.topo-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  position: relative;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+.logo span {
+  color: var(--verde);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-btn {
+  display: none;
+  cursor: pointer;
+  font-size: 1.6rem;
+  line-height: 1;
+  padding: 6px 10px;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  user-select: none;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 4px;
+}
+
+.menu a {
+  display: block;
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.menu a:hover {
+  color: var(--texto);
+  background-color: var(--bg-card);
+}
+
+.menu a.ativo {
+  color: var(--texto);
+  background-color: var(--bg-card);
+  border: 1px solid var(--borda);
+}
+
+/* ---------- Botões ---------- */
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 22px;
+  border-radius: 10px;
+  transition: transform 0.15s, background-color 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primario {
+  background-color: var(--verde);
+  color: #04130a;
+}
+
+.btn-primario:hover {
+  background-color: #4ade80;
+}
+
+.btn-secundario {
+  border: 1px solid var(--borda);
+  color: var(--texto);
+  background-color: var(--bg-card);
+}
+
+/* ---------- Seções ---------- */
+
+section {
+  padding: 70px 0;
+}
+
+.rotulo {
+  display: inline-block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--verde);
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 18px;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+
+.lead {
+  color: var(--texto-suave);
+  font-size: 1.1rem;
+  max-width: 640px;
+}
+
+.cabecalho-secao {
+  margin-bottom: 36px;
+}
+
+.cabecalho-secao p {
+  color: var(--texto-suave);
+  max-width: 640px;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding: 90px 0 60px;
+  text-align: center;
+}
+
+.hero .lead {
+  margin: 0 auto 30px;
+}
+
+.hero-botoes {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ---------- Cards ---------- */
+
+.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 26px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.card:hover {
+  border-color: var(--verde-escuro);
+  transform: translateY(-3px);
+}
+
+.card p {
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+}
+
+.card-imagem {
+  padding: 0;
+  overflow: hidden;
+}
+
+.card-imagem img {
+  width: 100%;
+  transition: transform 0.4s;
+}
+
+.card-imagem:hover img {
+  transform: scale(1.04);
+}
+
+.card-imagem .corpo {
+  padding: 22px;
+}
+
+.card-imagem a.imagem-link {
+  display: block;
+  overflow: hidden;
+}
+
+/* ---------- Artigos ---------- */
+
+.artigo {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.artigo h2 {
+  margin-top: 40px;
+}
+
+.artigo p {
+  color: var(--texto-suave);
+  margin-bottom: 16px;
+}
+
+.artigo ul {
+  color: var(--texto-suave);
+  margin: 0 0 16px 22px;
+}
+
+.artigo li {
+  margin-bottom: 8px;
+}
+
+.artigo strong {
+  color: var(--texto);
+}
+
+.artigo img {
+  width: 100%;
+  border-radius: var(--raio);
+  border: 1px solid var(--borda);
+  margin: 26px 0;
+}
+
+.destaque-texto {
+  border-left: 3px solid var(--verde);
+  padding: 14px 20px;
+  background-color: var(--bg-card);
+  border-radius: 0 var(--raio) var(--raio) 0;
+  margin: 24px 0;
+}
+
+/* ---------- Glossário ---------- */
+
+.termo {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--borda);
+}
+
+.termo p {
+  color: var(--texto-suave);
+}
+
+/* ---------- Formulário ---------- */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+form label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--texto);
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  color: var(--texto);
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: var(--verde);
+}
+
+form button {
+  align-self: flex-start;
+  cursor: pointer;
+  border: none;
+}
+
+/* ---------- Faixa de chamada ---------- */
+
+.chamada {
+  text-align: center;
+  background-color: var(--bg-card);
+  border: 1px solid var(--borda);
+  border-radius: 20px;
+  padding: 56px 24px;
+}
+
+.chamada p {
+  color: var(--texto-suave);
+  margin: 0 auto 26px;
+  max-width: 520px;
+}
+
+/* ---------- Rodapé ---------- */
+
+footer.rodape {
+  border-top: 1px solid var(--borda);
+  padding: 30px 0;
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+
+footer.rodape .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* ---------- Responsividade ---------- */
+
+@media (max-width: 900px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background-color: var(--bg);
+    border-bottom: 1px solid var(--borda);
+    padding: 12px 20px 20px;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .menu a {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .menu-toggle:checked ~ .menu {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 50px 0;
+  }
+
+  .hero {
+    padding: 60px 0 40px;
+  }
+
+  .hero-botoes .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .chamada {
+    padding: 40px 20px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  footer.rodape .container {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* ---------- Ilustrações SVG embutidas ---------- */
+
+.card-imagem svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s;
+}
+
+.card-imagem:hover svg {
+  transform: scale(1.04);
+}
+
+.figura {
+  margin: 30px 0;
+}
+
+.figura svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--raio);
+  border: 1px solid var(--borda);
+}
+
+.figura figcaption {
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.artigo ol {
+  color: var(--texto-suave);
+  margin: 0 0 16px 22px;
+}
+
+.artigo h1 + .lead {
+  margin-bottom: 30px;
+}
